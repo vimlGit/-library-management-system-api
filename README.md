@@ -1,4 +1,5 @@
 📚 Library Management System API
+
 This is a Library Management System Backend developed using Spring Boot REST API with JWT-based authentication and authorization.
 It provides secure endpoints for managing library operations with two roles: Librarian and Student.
 
