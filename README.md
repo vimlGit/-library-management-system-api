@@ -21,10 +21,14 @@ Librarian: Can manage books and issue operations.
 
 Student: Can view available books and check their issued books.
 
+
+
+
+
+
 🏗️ Project Structure
-sql
-Copy
-Edit
+
+
 src/main/java/com/vk/
 ├── controller          --> REST Controllers
 │   └── LibraryController.java
@@ -45,17 +49,27 @@ POST	/login	Authenticate user & generate JWT
 
 🛡️ Secured Endpoints
 ✅ Accessible by ROLE_LIBRARIAN:
+
+
 Method	Endpoint	Description
+
+
 POST	/submitBookAndCalculateChagres/{bookId}	Submit book and calculate charges
 POST	/addBookInLibrary	Add a new book to the library
 POST	/saveBookIssuedDetails	Save issued book details
 POST	/addMoreBooksOnExisting/{bookId}	Add more copies to an existing book
+
+
+
 
 ✅ Accessible by ROLE_STUDENT & ROLE_LIBRARIAN:
 Method	Endpoint	Description
 GET	/courseValidity	Check course validity
 GET	/searchBook	Search for a book
 GET	/showAllBook	View all available books
+
+
+
 
 ✅ All other endpoints require authentication with JWT token.
   Pass the JWT token in the Authorization header:
